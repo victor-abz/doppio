@@ -134,11 +134,11 @@ class SPAGenerator:
 		print("Scafolding vue project...")
 		if self.use_typescript:
 			subprocess.run(
-				["yarn", "create", "vite", self.spa_name, "--template", "vue-ts"], cwd=self.app_path
+				["yarn", "create", "vite", self.spa_name, "--template", "vue-ts", "--no-interactive"], cwd=self.app_path
 			)
 		else:
 			subprocess.run(
-				["yarn", "create", "vite", self.spa_name, "--template", "vue"], cwd=self.app_path
+				["yarn", "create", "vite", self.spa_name, "--template", "vue", "--no-interactive"], cwd=self.app_path
 			)
 
 		# Install router and other npm packages
@@ -212,12 +212,12 @@ class SPAGenerator:
 		print("Scaffolding React project...")
 		if self.use_typescript:
 			subprocess.run(
-				["yarn", "create", "vite", self.spa_name, "--template", "react-ts"],
+				["yarn", "create", "vite", self.spa_name, "--template", "react-ts", "--no-interactive"],
 				cwd=self.app_path,
 			)
 		else:
 			subprocess.run(
-				["yarn", "create", "vite", self.spa_name, "--template", "react"], cwd=self.app_path
+				["yarn", "create", "vite", self.spa_name, "--template", "react", "--no-interactive"], cwd=self.app_path
 			)
 
 		# Install router and other npm packages
