@@ -186,8 +186,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  base: "/{{name}}/",
-  history: createWebHistory(),
+  history: createWebHistory("/{{name}}"),
   routes,
 });
 
