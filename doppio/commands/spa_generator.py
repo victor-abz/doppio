@@ -61,12 +61,13 @@ class SPAGenerator:
 	def setup_tailwindcss(self):
 		# TODO: Convert to yarn command
 		# npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+		# Install Tailwind CSS v3 (v4 has breaking changes with init command)
 		subprocess.run(
 			[
 				"npm",
 				"install",
 				"-D",
-				"tailwindcss@latest",
+				"tailwindcss@^3.4",
 				"postcss@latest",
 				"autoprefixer@latest",
 			],
